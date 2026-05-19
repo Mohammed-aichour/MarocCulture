@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MarocCulture/static/css/main.cec1f66e.css",
+    "main.js": "/MarocCulture/static/js/main.22e9dc64.js",
+    "index.html": "/MarocCulture/index.html",
+    "main.cec1f66e.css.map": "/MarocCulture/static/css/main.cec1f66e.css.map",
+    "main.22e9dc64.js.map": "/MarocCulture/static/js/main.22e9dc64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cec1f66e.css",
+    "static/js/main.22e9dc64.js"
+  ]
+}

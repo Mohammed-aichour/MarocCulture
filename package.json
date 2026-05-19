@@ -2,8 +2,7 @@
   "name": "maroc-culture",
   "version": "0.1.0",
   "private": true,
-
-  "homepage": "https://mohammed-aichour.github.io/maroc-culture",
+  "homepage": "https://mohammed-aichour.github.io/MarocCulture",
 
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -22,10 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

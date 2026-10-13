@@ -1,71 +1,88 @@
-# Getting Started with Create React App
+# MarocCulture — Portail Culturel & Découverte Visuelle du Maroc
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **Conçu & Développé par Mohammed AICHOUR**  
+> *Ingénieur Logiciel & Architecte Web Full-Stack*
 
-## Available Scripts
+[![React](https://img.shields.io/badge/React-19+-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Open-Meteo](https://img.shields.io/badge/Weather-Open--Meteo-007ACC?style=flat)](https://open-meteo.com/)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-success)](#)
+[![Deployment](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue)](https://mohammed-aichour.github.io/MarocCulture/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Présentation du Projet
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**MarocCulture** est une plateforme web interactive dédiée à la mise en valeur du patrimoine culturel, architectural, gastronomique et touristique du Royaume du Maroc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+L'application intègre plusieurs sources de données ouvertes en temps réel :
+1. **Données Nationales (REST Countries API)** : Démographie, langues officielles, monnaie et géographie marocaine.
+2. **Météo en direct multi-villes** : Consultation météorologique des 10 principales métropoles du Maroc (Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir, Essaouira, Chefchaouen, etc.) via Open-Meteo sans dépendance de clé obligatoire.
+3. **Galerie d'Art & Patrimoine** : Navigation visuelle fluide avec intégration Pixabay et images de secours haute résolution issues de Wikimedia Commons.
+4. **Encyclopédie Culturelle** : Fiches thématiques sur la gastronomie, le zellige, les médinas impériales et l'artisanat marocain via les APIs Wikipédia.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏗️ Architecture du Projet
 
-### `npm run build`
+```text
+MarocCulture/
+│
+├── public/                     # Assets publics, favicon et manifest
+│   ├── index.html
+│   └── manifest.json
+│
+├── src/
+│   ├── api/                    # Clients d'intégration des APIs REST
+│   │   ├── country.js          # REST Countries API
+│   │   ├── httpError.js        # Gestion centralisée des erreurs HTTP
+│   │   ├── images.js           # Pixabay & fallback Wikimedia
+│   │   ├── weather.js          # Open-Meteo & OpenWeatherMap
+│   │   └── wikipedia.js        # API d'extraits encyclopédiques
+│   ├── components/             # Composants modulaires React
+│   │   ├── Culture/            # Fiches culturelles & cartes thématiques
+│   │   ├── Gallery/            # Explorateur photo haute définition
+│   │   ├── Home/               # Vue d'accueil immersive & sélecteurs
+│   │   └── Weather/            # Météo héro & prévisions
+│   ├── config.js               # Normalisation des villes et constantes
+│   ├── config.test.js          # Suite de tests unitaires de normalisation
+│   ├── App.js                  # Routage et orchestration d'état
+│   └── App.test.js             # Tests de rendu des composants React
+│
+├── package.json
+└── README.md
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Installation & Démarrage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prérequis
+- Node.js 18+
+- npm ou yarn
 
-### `npm run eject`
+### Lancement en développement
+```bash
+npm install
+npm start
+```
+L'application démarre sur `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Tests automatisés
+```bash
+npm test
+```
+*Taux de réussite des tests : 100% (2 suites / 4 tests).*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build de production
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 👨‍💻 Auteur
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# react-weather-gallery
+**Mohammed AICHOUR**  
+- GitHub : [@Mohammed-aichour](https://github.com/Mohammed-aichour)  
+- Portfolio Officiel : Intégré au portail d'ingénierie officiel.

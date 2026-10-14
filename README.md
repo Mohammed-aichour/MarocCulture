@@ -9,6 +9,10 @@
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success)](#)
 [![Deployment](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue)](https://mohammed-aichour.github.io/MarocCulture/)
 
+<p align="center">
+  <img src="screenshots/maroc_culture_preview.png" alt="Aperçu MarocCulture" width="100%">
+</p>
+
 ---
 
 ## 📌 Présentation du Projet

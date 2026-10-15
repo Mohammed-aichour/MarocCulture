@@ -27,6 +27,27 @@ L'application intègre plusieurs sources de données ouvertes en temps réel :
 
 ---
 
+## 🏛️ Flux Architectural & Connecteurs Multi-Sources
+
+```mermaid
+flowchart TD
+    UI["Frontend React 19 (SPA)<br>Bootstrap 5 & Hooks Réactifs"]
+    
+    UI --> CompHome["Module Accueil (Home/HomePage.jsx)"]
+    UI --> CompWeather["Module Météo (Weather/WeatherHero.jsx)"]
+    UI --> CompGallery["Module Galerie (Gallery/PhotoGrid.jsx)"]
+    UI --> CompCulture["Module Culture (Culture/CultureCards.jsx)"]
+
+    CompWeather --> APIWeather["Open-Meteo & OpenWeatherMap Client"]
+    CompGallery --> APIGallery["Pixabay API + Wikimedia Fallback"]
+    CompCulture --> APICountry["REST Countries API"]
+    CompCulture --> APIWiki["Wikipedia Extracts API"]
+
+    ErrorHandler["Gestionnaire d'Erreurs Centralisé (httpError.js)"] -. "Tolérance aux pannes" .-> UI
+```
+
+---
+
 ## 🏗️ Architecture du Projet
 
 ```text
